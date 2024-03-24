@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 //import ProfileScreen from './pages/ProfileScreen';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
+import New from './pages/new/new';
 
 
 
@@ -47,7 +48,8 @@ function App() {
     <NavigationContainer>
      {sessionExists ? (
           <Stack.Navigator initialRouteName='Home'>
-            <Stack.Screen name="Home" component={HomePage} options={{ headerShown: false }} />
+            <Stack.Screen name="Home" component={New} options={{ headerShown: false }} />
+            <Stack.Screen name="Login" component={LoginPage} options={{ headerShown: false }} />
 
           </Stack.Navigator>
         ) : (

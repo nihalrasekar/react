@@ -39,8 +39,8 @@ const ProfileScreen: React.FC = ({ }) => {
 
   const handleLogout = async () => {
     try {
-      await AsyncStorage.removeItem('sessionId');
-      navigation.navigate('Login');
+      await AsyncStorage.removeItem('sessionId'); // Remove the sessionId key
+      //navigation.navigate('Login');
     } catch (error) {
       console.error('Error logging out:', error);
     }
